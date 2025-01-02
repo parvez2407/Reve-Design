@@ -1,0 +1,137 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reve Design Contact </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .contact-header {
+            background: linear-gradient(to right, #b9c0c9, #89868f);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .contact-form {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .map-container {
+            margin-bottom: 30px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-icons a {
+            font-size: 20px;
+            margin: 0 10px;
+            color: #007bff;
+            transition: color 0.3s;
+        }
+        .contact-icons a:hover {
+            color: #6610f2;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-white">
+        <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-white bg-white">
+       <div class="container-fluid">
+           <a class="navbar-brand" href="index.html"><img src="image/IMG_5791.PNG" alt="" height="36px" width="100px"></a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ms-auto">
+                   <li class="nav-item">
+                       <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="about.html">About</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="services.html">Services</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="contect.html">Contact</a>
+                   </li>
+               </ul>
+           </div>
+       </div>
+   </nav>
+   </header>
+
+    <header class="contact-header" bg-white>
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you</p>
+    </header>
+
+    <section class="container py-5">
+        <!-- Map Section -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509371!2d144.9537353156169!3d-37.81627944202159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d8a49594da26!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1614317601821!5m2!1sen!2sau" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="contact-form">
+                    <h3 class="text-center mb-4">Get in Touch</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control" id="description" rows="4" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Links -->
+        <div class="text-center mt-5">
+            <h4>Connect with Us</h4>
+            <div class="contact-icons">
+                <a href="https://wa.me/yourwhatsapplink" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i></a>
+                <a href="mailto:info@example.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Optional JavaScript for form validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for contacting us!');
+        });
+    </script>
+</body>
+</html>
