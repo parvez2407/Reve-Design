@@ -109,9 +109,42 @@ i{
             background: linear-gradient(to right,#eaece3, #eaece6);
             color: #013f2b;
         }
-        #disc{ background: linear-gradient(to right,#eaece3, #eaece6);
+        #disc{ background: linear-gradient(to right,#eff0ec, #ebece6);
             color: #013f2b;}
-      
+        /* Auto-scrolling animation */
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .scroll-container {
+      display: flex;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .scroll-content {
+      display: flex;
+      animation: scroll 50s linear infinite;
+    }
+
+    .scroll-item {
+      flex: 0 0 auto;
+      width: 380px;
+      height: 100px;
+      margin: 0 10px;
+    }
+
+    /* Make it responsive */
+    @media (max-width: 768px) {
+      .scroll-item {
+        width: 200px;
+      }
+    }
 
 </style>
 
@@ -267,7 +300,7 @@ i{
 
    
     <div class="clients container py-5">
-        <h2 class="text-center mb-4">Our Beloved Clients</h2>
+        <h2 class="text-center mb-4">Our Projects</h2>
         <a href="contect.html">
         <div class="row">
             <div class="col-md-2"><img src="image/img1.jpg" alt="Client 1"></div>
@@ -316,6 +349,24 @@ i{
             
         </div></a>
     </div>
+    <h2 class="text-center mb-4">Our Beloved Clients</h2>
+    <div class="scroll-container">
+        <div class="scroll-content">
+          <div class="scroll-item  text-center p-3"><img src="image/Logo 1 .png" height="100px" width="220px" alt=""></div>
+          <div class="scroll-item  text-center p-3"><img src="image/Logo 2.png"  height="100px" width="220px" alt=""></div>
+          <div class="scroll-item  text-center p-3"><img src="image/Logo 3.png"  height="100px" width="220px" alt=""></div>
+          <div class="scroll-item  text-center p-3"><img src="image/Logo 5.png"  height="100px" width="220px" alt=""></div>
+          <div class="scroll-item  text-center p-3"><img src="image/Logo 6.png" height="100px" width="220px" alt=""></div>
+          <div class="scroll-item  text-center p-3"><img src="image/Logo 7.png"height="100px" width="220px" alt=""></div>
+          <div class="scroll-item  text-center p-3"><img src="image/Logo 1 .png" height="100px" width="220px" alt=""></div>
+          <div class="scroll-item  text-center p-3"><img src="image/Logo 2.png"  height="100px" width="220px" alt=""></div>
+          <div class="scroll-item  text-center p-3"><img src="image/Logo 3.png"  height="100px" width="220px" alt=""></div>
+          <div class="scroll-item  text-center p-3"><img src="image/Logo 1 .png" height="100px" width="220px" alt=""></div>
+          <div class="scroll-item  text-center p-3"><img src="image/Logo 2.png"  height="100px" width="220px" alt=""></div>
+          <div class="scroll-item  text-center p-3"><img src="image/Logo 3.png"  height="100px" width="220px" alt=""></div>
+        </div>
+      </div>
+
 
     <div class="contact text-center py-5">
         <h2>We Are Here To Help</h2>
