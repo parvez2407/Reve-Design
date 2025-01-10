@@ -100,6 +100,20 @@ footer {
     padding: 1rem 0;
 }
 
+
+/* For phones and smaller screens (480px and below) */
+@media (max-width: 480px) {
+    .slider {
+        height: 200px;
+    }
+}
+
+/* For very large screens/desktops (1200px and above) */
+@media (min-width: 1200px) {
+    .slider {
+        height: 600px;
+    }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .slider {
