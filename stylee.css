@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+#slider {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    gap: 10px;
+}
+
+.slide {
+    flex: 0 0 100%;  /* Each slide will take full width */
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Navigation buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 123, 255, 0.8);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 123, 255, 1);
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slider-container {
+        max-width: 100%;
+    }
+
+    .slider-btn {
+        padding: 8px 15px;
+        font-size: 18px;
+    }
+}
