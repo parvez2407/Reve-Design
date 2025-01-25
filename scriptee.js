@@ -14,31 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Next button click
     nextBtn.addEventListener('click', () => {
-        if (slideIndex < totalSlides - 1) {
-            slideIndex++;
-        } else {
-            slideIndex = 0;  // Loop back to the first slide
-        }
+        slideIndex = (slideIndex + 1) % totalSlides;
         updateSlider();
     });
 
     // Previous button click
     prevBtn.addEventListener('click', () => {
-        if (slideIndex > 0) {
-            slideIndex--;
-        } else {
-            slideIndex = totalSlides - 1;  // Loop to the last slide
-        }
+        slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
         updateSlider();
     });
 
     // Auto-slide feature
     let autoSlide = setInterval(() => {
-        if (slideIndex < totalSlides - 1) {
-            slideIndex++;
-        } else {
-            slideIndex = 0;
-        }
+        slideIndex = (slideIndex + 1) % totalSlides;
         updateSlider();
     }, 4000);
 
@@ -49,11 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     slider.addEventListener('mouseleave', () => {
         autoSlide = setInterval(() => {
-            if (slideIndex < totalSlides - 1) {
-                slideIndex++;
-            } else {
-                slideIndex = 0;
-            }
+            slideIndex = (slideIndex + 1) % totalSlides;
             updateSlider();
         }, 4000);
     });
@@ -70,11 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Throttled next button click
     nextBtn.addEventListener('click', () => throttleSlideChange(() => {
         slideIndex = (slideIndex + 1) % totalSlides;
         updateSlider();
     }));
 
+    // Throttled previous button click
     prevBtn.addEventListener('click', () => throttleSlideChange(() => {
         slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
         updateSlider();

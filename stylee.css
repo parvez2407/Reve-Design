@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
 .slider-container {
@@ -14,12 +16,12 @@ body {
 
 #slider {
     display: flex;
+    flex-wrap: nowrap;  /* Prevent wrapping */
     transition: transform 0.4s ease-in-out;
-    gap: 10px;
 }
 
 .slide {
-    flex: 0 0 100%;  /* Each slide will take full width */
+    flex: 0 0 100%;  /* Ensure each slide takes full width */
 }
 
 .slide img {
@@ -40,6 +42,7 @@ body {
     font-size: 24px;
     border-radius: 5px;
     z-index: 10;
+    transition: background-color 0.3s;
 }
 
 .slider-btn:hover {
