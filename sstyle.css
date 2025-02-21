@@ -40,7 +40,7 @@ header{
 }
 .carousel .list .item .author{
     font-weight: bold;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
 }
 .carousel .list .item .title,
 .carousel .list .item .topic{
@@ -49,7 +49,7 @@ header{
     line-height: 1.3em;
 }
 .carousel .list .item .topic{
-    color: #f1683a;
+    color: #ecdda1;
 }
 .carousel .list .item .buttons{
     display: grid;
@@ -288,5 +288,53 @@ header{
     }
     .carousel .list .item .content .title{
         font-size: 30px;
+    }
+}
+
+
+
+@media screen and (max-width: 678px) {
+    .carousel {
+        height: 80vh; /* Reduce height for better fit */
+    }
+    .carousel .list .item .content {
+        padding-right: 0;
+        top: 15%; /* Adjust text position */
+        max-width: 90%;
+    }
+    .carousel .list .item .content .title {
+        font-size: 28px; /* Smaller title font */
+        line-height: 1.2em;
+    }
+    .carousel .list .item .content .topic {
+        font-size: 22px; /* Adjust topic font */
+    }
+    .carousel .list .item .content .buttons {
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: 35px;
+    }
+    .carousel .list .item .buttons button {
+        font-size: 12px;
+        padding: 5px;
+    }
+    .thumbnail {
+        bottom: 20px;
+        gap: 10px;
+    }
+    .thumbnail .item {
+        width: 100px;
+        height: 150px;
+    }
+    .arrows {
+        top: 85%;
+        right: 40%;
+        width: 200px;
+    }
+    .arrows button {
+        width: 35px;
+        height: 35px;
+    }
+    .carousel .time {
+        height: 2px;
     }
 }
